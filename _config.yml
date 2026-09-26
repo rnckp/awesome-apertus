@@ -1,0 +1,39 @@
+title: Awesome Apertus
+description: Official resources, models, tools, integrations, and community projects for Apertus AI.
+url: https://rnckp.github.io
+baseurl: /awesome-apertus
+repository: rnckp/awesome-apertus
+theme: jekyll-theme-primer
+
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+
+include:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+
+readme_index:
+  remove_originals: true
+
+optional_front_matter:
+  remove_originals: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - SKILL.md
+  - AGENTS.md
+  - src
+  - pyproject.toml
+  - uv.lock
+  - _.code-workspace
+  - Gemfile
+  - Gemfile.lock
+  - vendor
