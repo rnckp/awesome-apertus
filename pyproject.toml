@@ -1,0 +1,17 @@
+[project]
+name = "awesome-apertus"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Patrick Arnecke", email = "mail@arnecke.ch" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+awesome-apertus = "awesome_apertus:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
