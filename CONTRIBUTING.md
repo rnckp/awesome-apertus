@@ -14,7 +14,7 @@ For corrections, include the current link, replacement or evidence, and the date
 
 ## Updating with an AI agent
 
-Ask the agent to read and follow the repository's [SKILL.md](https://github.com/rnckp/awesome-apertus/blob/main/SKILL.md). For example: “Use SKILL.md to refresh the Apertus resources, verify changed links, and update the research notes.” The file is portable agent guidance; it does not need an authenticated connector.
+Ask the agent to read and follow [the maintenance skill](https://github.com/rnckp/awesome-apertus/blob/main/.agent/skills/update-awesome-apertus/SKILL.md). For example: “Use `.agent/skills/update-awesome-apertus/SKILL.md` to refresh the Apertus resources, verify changed links, and update the research notes.” The file is portable agent guidance; it does not need an authenticated connector.
 
 ## Publishing the website
 

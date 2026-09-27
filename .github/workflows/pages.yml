@@ -39,7 +39,7 @@ jobs:
           test -s _site/CONTRIBUTING.html
           test -s _site/LICENSE
           grep -q 'id="official-models"' _site/index.html
-          test ! -e _site/SKILL.html
+          test ! -d _site/.agent
           test ! -e _site/pyproject.toml
           test ! -d _site/src
 

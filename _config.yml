@@ -32,7 +32,7 @@ defaults:
       permalink: /
 
 exclude:
-  - SKILL.md
+  - .agent
   - AGENTS.md
   - src
   - pyproject.toml
