@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from awesome-apertus!")
+"""Maintenance helpers for the Awesome Apertus directory."""

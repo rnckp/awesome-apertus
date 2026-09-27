@@ -37,3 +37,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - tests
+  - Makefile
+  - count_sources.md
+  - link-check-report.md

@@ -2,3 +2,18 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .sass-cache/
+
+# Python environments, packaging and caches
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ruff_cache/
+
+# Generated maintenance reports
+/count_sources.md
+/link-check-report.md
+
+.DS_Store

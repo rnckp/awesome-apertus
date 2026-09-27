@@ -1,22 +1,32 @@
 # Awesome Apertus
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Suggestions welcome](https://img.shields.io/badge/suggestions-welcome-brightgreen)](https://github.com/rnckp/awesome-apertus/issues/new)
+[![License: CC0](https://img.shields.io/badge/license-CC0-blue)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/rnckp/awesome-apertus.svg)](https://github.com/rnckp/awesome-apertus)
+[![Last commit](https://img.shields.io/github/last-commit/rnckp/awesome-apertus)](https://github.com/rnckp/awesome-apertus/commits/main/)
 A curated guide to [Apertus](https://www.apertus-ai.org/), the open multilingual model family from the [Swiss AI Initiative](https://www.swiss-ai.org/), developed by EPFL, ETH Zurich, and CSCS. Official models, reproducibility resources, tools, integrations, and community projects.
 
 **Last researched: September 26, 2026.** Independent community list. “Official” means published by the Apertus team or Swiss AI; other projects belong to their respective maintainers. Collections cover variant families without listing every duplicate conversion. See [research notes](RESEARCH.md) for scope and verification limits.
 
-## Contents
+<details>
+<summary><strong>Table of Contents</strong></summary>
 
-- [Start here](#start-here)
-- [Official sites and documentation](#official-sites-and-documentation)
-- [Official models](#official-models)
-- [Official code and training infrastructure](#official-code-and-training-infrastructure)
-- [Datasets and transparency](#datasets-and-transparency)
-- [Research and evaluation](#research-and-evaluation)
-- [Local inference and serving](#local-inference-and-serving)
-- [Community quantizations and derivatives](#community-quantizations-and-derivatives)
-- [Hosted APIs and cloud deployment](#hosted-apis-and-cloud-deployment)
-- [Applications and integrations](#applications-and-integrations)
-- [Community and contributing](#community-and-contributing)
+<ul>
+  <li><a href="#start-here">Start here</a></li>
+  <li><a href="#official-sites-and-documentation">Official sites and documentation</a></li>
+  <li><a href="#official-models">Official models</a></li>
+  <li><a href="#official-code-and-training-infrastructure">Official code and training infrastructure</a></li>
+  <li><a href="#datasets-and-transparency">Datasets and transparency</a></li>
+  <li><a href="#research-and-evaluation">Research and evaluation</a></li>
+  <li><a href="#local-inference-and-serving">Local inference and serving</a></li>
+  <li><a href="#community-quantizations-and-derivatives">Community quantizations and derivatives</a></li>
+  <li><a href="#hosted-apis-and-cloud-deployment">Hosted APIs and cloud deployment</a></li>
+  <li><a href="#applications-and-integrations">Applications and integrations</a></li>
+  <li><a href="#community-and-contributing">Community and contributing</a></li>
+</ul>
+
+</details>
 
 ## Start here
 
@@ -235,3 +245,5 @@ Entries were found through the official [directory](https://apertus-ai.org/pages
 - **Follow updates:** [Mastodon](https://fosstodon.org/@apertus), [LinkedIn](https://www.linkedin.com/company/apertus/), [X](https://x.com/apertusllm), and [Bluesky](https://bsky.app/profile/did:plc:ytwqtr3ykzq6nzr7kg2465ca).
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), then suggest a resource with a primary source, a short description, and the relevant Apertus version. This list is released under [CC0 1.0](LICENSE); linked projects retain their own licenses.
+
+For maintenance scripts and development commands, see the [helper documentation](https://github.com/rnckp/awesome-apertus/blob/main/src/README.md).
