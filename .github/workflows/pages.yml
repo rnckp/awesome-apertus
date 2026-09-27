@@ -32,6 +32,17 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Check generated pages
+        run: |
+          test -s _site/index.html
+          test -s _site/RESEARCH.html
+          test -s _site/CONTRIBUTING.html
+          test -s _site/LICENSE
+          grep -q 'id="official-models"' _site/index.html
+          test ! -e _site/SKILL.html
+          test ! -e _site/pyproject.toml
+          test ! -d _site/src
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:

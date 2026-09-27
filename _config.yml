@@ -26,6 +26,10 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: "README.md"
+    values:
+      permalink: /
 
 exclude:
   - SKILL.md
