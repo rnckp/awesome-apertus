@@ -182,6 +182,7 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 
 - **Red Hat AI FP8:** [8B Instruct](https://huggingface.co/RedHatAI/Apertus-8B-Instruct-2509-FP8-dynamic) — Dynamic FP8 conversion for compatible GPU serving.
 - **OnPrem AI 1.5:** [8B FP8](https://huggingface.co/onprem-ai/Apertus-v1.5-8B-FP8), [70B FP8](https://huggingface.co/onprem-ai/Apertus-v1.5-70B-FP8), and [70B NVFP4](https://huggingface.co/onprem-ai/Apertus-v1.5-70B-NVFP4) — Quantized checkpoints with a [temporary vLLM build](https://github.com/onprem-ai/vllm-apertus-1p5).
+- [Andreas Martin's Apertus 1.5 8B text-only conversion](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text) — Text backbone repackaged for standard Transformers (4.56+), without a custom fork or remote code; omits image/audio input and requires accepting the model's access conditions.
 - **1.5 text-only GGUF:** [Andreas Martin Q8_0](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text-Q8_0-GGUF) and [Colby Q4_K_M](https://huggingface.co/Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF) — 8B conversions that omit multimodal capabilities.
 - **1.5 text-only MLX:** [m1rkocasu 4-bit DWQ](https://huggingface.co/m1rkocasu/Apertus-v1.5-8B-text-MLX-4bit-DWQ) — Community Apple Silicon conversion.
 - **Mini ONNX:** [0.5B](https://huggingface.co/onnx-community/Apertus-v1.1-0.5B-Instruct-QAD-INT4-ONNX), [1.5B](https://huggingface.co/onnx-community/Apertus-v1.1-1.5B-Instruct-QAD-INT4-ONNX), and [4B](https://huggingface.co/onnx-community/Apertus-v1.1-4B-Instruct-QAD-INT4-ONNX) — INT4 browser/runtime conversions.
@@ -192,6 +193,11 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 - [Apertus EstLLM](https://huggingface.co/tartuNLP/Apertus-EstLLM-8B-Instruct-0326) — TartuNLP's Estonian adaptation; [base checkpoint](https://huggingface.co/tartuNLP/Apertus-EstLLM-8B-1125) and [paper](https://arxiv.org/abs/2603.02041).
 - **Apertus MeditronFO:** [8B](https://huggingface.co/EPFLiGHT/Apertus-8B-MeditronFO) and [70B](https://huggingface.co/EPFLiGHT/Apertus-70B-MeditronFO) — Medical-domain research models; [training pipeline](https://github.com/EPFLiGHT/FullyOpenMeditron) and [paper](https://arxiv.org/abs/2605.16215).
 - [Greek Apertus](https://github.com/eellak/greek-apertus) — Ongoing Greek continued-pretraining and tokenizer project using GlossAPI data; tooling, not a finished model release.
+- [Andreas Martin's Apertus collection](https://huggingface.co/collections/andreasmartin/apertus) — Experimental and educational adaptations, including Apertus 1.1 Mini and 1.5 embedding conversions, text-only formats, and a biomedical fine-tune.
+
+### Community fine-tuning tutorials
+
+- [Hack Apertus SFT notebook](https://www.kaggle.com/code/andreasmartinch/sft-apertus-v1-5-8b-hack-apertus-template) — Andreas Martin's Jupyter template for fine-tuning Apertus 1.5 8B, designed for FHNW Business students contributing to Hack Apertus; author reports testing on Kaggle and CSCS JupyterLab (Clariden).
 
 ## Hosted APIs and cloud deployment
 

@@ -41,6 +41,14 @@ Review release pages and model cards first, then refresh providers, runtime supp
 
 ## Verification results
 
+### Targeted additions — October 2, 2026
+
+Added three Andreas Martin resources suggested by the maintainer via LinkedIn: the [Hack Apertus SFT notebook](https://www.kaggle.com/code/andreasmartinch/sft-apertus-v1-5-8b-hack-apertus-template), [Apertus 1.5 8B text-only conversion](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text), and [experimental Apertus collection](https://huggingface.co/collections/andreasmartin/apertus). The authored Hugging Face model card confirms standard Transformers 4.56+ support and gated access; the collection lists educational adaptations, embedding conversions, and a biomedical fine-tune. The notebook's purpose and Kaggle/CSCS testing are based on the author's supplied description because its contents were unavailable through web browsing.
+
+The repository's link checker checked only these three URLs: all were reachable, with no likely broken or unresolved results. The resource counter reports 109 resource-bullet entries, an increase of three. `git diff --check` passed. No notebook or model was executed; the overall research date remains September 26.
+
+### Full review — September 26, 2026
+
 On the research date, 241 distinct external destinations were checked with HTTP GET requests, following redirects. Of these, 240 returned HTTP 200. [Safe Swiss Cloud](https://safeswisscloud.com/en/private-ai/) returned HTTP 403 to the automated checker; its content was independently accessible through web browsing and its Apertus listing was corroborated by the official provider directory.
 
 Local file links and table-of-contents anchors passed validation. Markdown table structure and `git diff --check` also passed. HTTP success establishes reachability, not functional testing of the linked software, services, or individual external-page fragments.
