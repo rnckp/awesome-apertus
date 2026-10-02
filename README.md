@@ -8,7 +8,7 @@
 
 A curated guide to [Apertus](https://www.apertus-ai.org/), the open multilingual model family from the [Swiss AI Initiative](https://www.swiss-ai.org/), developed by EPFL, ETH Zurich, and CSCS. Official models, reproducibility resources, tools, integrations, and community projects.
 
-**Last researched: September 26, 2026.** Independent community list. “Official” means published by the Apertus team or Swiss AI; other projects belong to their respective maintainers. Collections cover variant families without listing every duplicate conversion. See [research notes](RESEARCH.md) for scope and verification limits.
+**Last researched: September 26, 2026.** Independent community list; “official” denotes Apertus team or Swiss AI resources. See [research notes](RESEARCH.md) for scope and verification limits.
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
@@ -45,7 +45,6 @@ A curated guide to [Apertus](https://www.apertus-ai.org/), the open multilingual
 - [Documentation hub](https://apertus-ai.org/pages/documentation/) — Downloads, technical resources, and policy documents.
 - [Technical overview](https://apertus-ai.org/docs/overview/) and [FAQ](https://apertus-ai.org/docs/faq/) — Orientation and common questions.
 - [Provider directory](https://apertus-ai.org/pages/get-started/) and [community showcase](https://apertus-ai.org/pages/get-showcase/) — Officially listed services and applications.
-- [Research library](https://apertus-ai.org/pages/research/) and [Zotero group](https://www.zotero.org/groups/6385576/apertus) — Papers and supporting literature.
 - [GitHub organization](https://github.com/swiss-ai) — Authoritative code index; includes other Swiss AI research alongside Apertus.
 - [Hugging Face organization](https://huggingface.co/swiss-ai) — Authoritative models, datasets, collections, and demos.
 - [News](https://apertus-ai.org/news/) and [newsletter](https://apertus-ai.org/subscribe/) — Updates, including [Apertus 1.5](https://apertus-ai.org/articles/2026-07-apertus-1-5/) and the [September 2026 ecosystem review](https://apertus-ai.org/articles/2026-09-apertus-1-5-ga/).
@@ -96,21 +95,8 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 - [model-launch](https://github.com/swiss-ai/model-launch) — Alps model-launch CLI and official [1.5 inference Dockerfile](https://github.com/swiss-ai/model-launch/blob/main/images/vllm_apertus_1.5_release/Dockerfile).
 - [serving-api](https://github.com/swiss-ai/serving-api) and [llm-proxy](https://github.com/swiss-ai/llm-proxy) — Swiss AI serving frontend, API proxy, and access-control infrastructure.
 - [OpenTela](https://github.com/swiss-ai/OpenTela) — Distributed compute orchestration used by Swiss AI serving; [upstream project](https://github.com/eth-easl/OpenTela).
-- [Transformers fork](https://github.com/swiss-ai/transformers), [vLLM fork](https://github.com/swiss-ai/vllm), and [vLLM integration work](https://github.com/swiss-ai/vllm-apertus-integration) — Swiss AI implementations; use the revisions pinned in model cards.
-- [SGLang](https://github.com/swiss-ai/sglang), [sglang-apertus](https://github.com/swiss-ai/sglang-apertus), and [Scratchpad](https://github.com/swiss-ai/Scratchpad) — Serving and integration work; 1.5 support is still under development in the [guide](https://apertus-ai.org/docs/guides/sglang/).
 - [gh200-wheels](https://github.com/swiss-ai/gh200-wheels) — Wheels and images for NVIDIA Grace Hopper hardware.
 - [model-compatibility-suite](https://github.com/swiss-ai/model-compatibility-suite) — Endpoint conformance and capability checks.
-- [data-indexing](https://github.com/swiss-ai/data-indexing) and [dataset-browser](https://github.com/swiss-ai/dataset-browser) — Corpus search and local data inspection; infrastructure access may be required.
-
-### Research projects
-
-- [apertus-probes](https://github.com/swiss-ai/apertus-probes) — Hallucination probes and activation analysis.
-- [apertus-translate](https://github.com/swiss-ai/apertus-translate) — Translation experiments and human-evaluation annotations.
-- [vocab-reduction](https://github.com/swiss-ai/vocab-reduction) — Vocabulary-size optimization for training and inference.
-- [prune-apertus-lm-head](https://github.com/swiss-ai/prune-apertus-lm-head) — 1.5 output-head conversion while retaining multimodal input token IDs.
-- [Apertus RAG evaluation](https://github.com/swiss-ai/ml4science-apertus-rag-evaluation) — Research comparing retrieval, chunking, and reranking strategies.
-- [apertus-speculative-decoding](https://github.com/swiss-ai/apertus-speculative-decoding) — Reproducible 1.5 serving-performance study.
-- [apertus-tokenizer-development](https://github.com/swiss-ai/apertus-tokenizer-development) — Preliminary next-generation tokenizer research; not a released Apertus 2 model.
 
 ## Datasets and transparency
 
@@ -127,6 +113,11 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 - **Evaluation datasets:** [mLogiQA](https://huggingface.co/datasets/swiss-ai/mlogiqa), [MathQA](https://huggingface.co/datasets/swiss-ai/math_qa), [BLEnD sample](https://huggingface.co/datasets/swiss-ai/blend-sample), and [HalluLens](https://huggingface.co/datasets/swiss-ai/hallulens).
 - **Safety evaluation artifacts:** [HarmBench](https://huggingface.co/datasets/swiss-ai/harmbench), [copyright classifier hashes](https://huggingface.co/datasets/swiss-ai/harmbench_copyright_classifier_hashes), [RealToxicityPrompts](https://huggingface.co/datasets/swiss-ai/realtoxicityprompts), and [PolygloToxicityPrompts](https://huggingface.co/datasets/swiss-ai/polyglotoxicityprompts).
 
+### Corpus inspection tools
+
+- [data-indexing](https://github.com/swiss-ai/data-indexing) and [dataset-browser](https://github.com/swiss-ai/dataset-browser) — Corpus search and local data inspection; infrastructure access may be required.
+- [HEVS pretraining-data indexing](https://github.com/Reliable-Information-Lab-HEVS/apertus-pretraining-data-indexing) — Community detokenization, Elasticsearch indexing, and corpus inspection tools.
+
 ## Research and evaluation
 
 ### Papers and technical sources
@@ -139,7 +130,17 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 - [xIELU activation](https://arxiv.org/abs/2411.13010) and [AdEMAMix optimizer](https://arxiv.org/abs/2409.03137) — Core architectural and optimization ingredients.
 - [INCLUDE](https://arxiv.org/abs/2411.19799) and [Global MMLU](https://arxiv.org/abs/2412.03304) — Multilingual evaluation references.
 - [Parity-aware BPE](https://arxiv.org/abs/2508.04796) — Cross-language tokenization research; [code](https://github.com/swiss-ai/parity-aware-bpe).
-- [Full research bibliography](https://apertus-ai.org/pages/research/) — Additional work on data, optimization, safety, and serving. The page still lists the 1.5 technical report as forthcoming at the research date.
+- [Research library](https://apertus-ai.org/pages/research/) and [Zotero group](https://www.zotero.org/groups/6385576/apertus) — Papers and supporting literature on data, optimization, safety, and serving. The page still lists the 1.5 technical report as forthcoming at the research date.
+
+### Research projects
+
+- [apertus-probes](https://github.com/swiss-ai/apertus-probes) — Hallucination probes and activation analysis.
+- [apertus-translate](https://github.com/swiss-ai/apertus-translate) — Translation experiments and human-evaluation annotations.
+- [vocab-reduction](https://github.com/swiss-ai/vocab-reduction) — Vocabulary-size optimization for training and inference.
+- [prune-apertus-lm-head](https://github.com/swiss-ai/prune-apertus-lm-head) — 1.5 output-head conversion while retaining multimodal input token IDs.
+- [Apertus RAG evaluation](https://github.com/swiss-ai/ml4science-apertus-rag-evaluation) — Research comparing retrieval, chunking, and reranking strategies.
+- [apertus-speculative-decoding](https://github.com/swiss-ai/apertus-speculative-decoding) — Reproducible 1.5 serving-performance study.
+- [apertus-tokenizer-development](https://github.com/swiss-ai/apertus-tokenizer-development) — Preliminary next-generation tokenizer research; not a released Apertus 2 model.
 
 ### Evaluation tools and results
 
@@ -156,9 +157,9 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 
 | Tool                     | Apertus resource                                                                                                                                                                                | Notes                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Transformers             | [Official guide](https://apertus-ai.org/docs/guides/transformers/) · [upstream model docs](https://huggingface.co/docs/transformers/model_doc/apertus)                                          | Python model loading; use the 1.5 card's pinned fork for multimodal support.                                        |
-| vLLM                     | [Official guide](https://apertus-ai.org/docs/guides/vllm/) · [1.5 model card](https://huggingface.co/swiss-ai/Apertus-v1.5-70B#how-to-use)                                                      | GPU serving; version-specific parsers and containers.                                                               |
-| SGLang                   | [Official guide](https://apertus-ai.org/docs/guides/sglang/)                                                                                                                                    | Original-model examples; 1.5 integration is work in progress.                                                       |
+| Transformers             | [Official guide](https://apertus-ai.org/docs/guides/transformers/) · [upstream model docs](https://huggingface.co/docs/transformers/model_doc/apertus) · [Swiss AI fork](https://github.com/swiss-ai/transformers)                                          | Python model loading; use the 1.5 card's pinned fork for multimodal support.                                        |
+| vLLM                     | [Official guide](https://apertus-ai.org/docs/guides/vllm/) · [1.5 model card](https://huggingface.co/swiss-ai/Apertus-v1.5-70B#how-to-use) · [Swiss AI fork](https://github.com/swiss-ai/vllm) · [integration work](https://github.com/swiss-ai/vllm-apertus-integration)                                                      | GPU serving; use model-card-pinned revisions, parsers, and containers.                                                               |
+| SGLang                   | [Official guide](https://apertus-ai.org/docs/guides/sglang/) · [Swiss AI fork](https://github.com/swiss-ai/sglang) · [sglang-apertus](https://github.com/swiss-ai/sglang-apertus) · [Scratchpad](https://github.com/swiss-ai/Scratchpad)                                                                                                                                    | Original-model examples; 1.5 integration is work in progress.                                                       |
 | llama.cpp                | [Upstream](https://github.com/ggml-org/llama.cpp) · [experimental 1.5 branch](https://github.com/MichelRosselli/llama.cpp/tree/model/apertus-v1.5)                                              | Follow the [maintainer's discussion](https://huggingface.co/swiss-ai/Apertus-v1.5-8B/discussions/6) for 1.5 status. |
 | Ollama                   | [Official guide](https://apertus-ai.org/docs/user/ollama/) · [v1 community package](https://ollama.com/MichelRosselli/apertus) · [Mini package](https://ollama.com/MichelRosselli/apertus-v1.1) | Community-maintained model packages.                                                                                |
 | LM Studio                | [Official guide](https://apertus-ai.org/docs/user/lmstudio/)                                                                                                                                    | Desktop UI for compatible local model builds.                                                                       |
@@ -171,9 +172,14 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 
 ### Alternative formats
 
-- **Unsloth GGUF:** [8B](https://huggingface.co/unsloth/Apertus-8B-Instruct-2509-GGUF) and [70B](https://huggingface.co/unsloth/Apertus-70B-Instruct-2509-GGUF) — Original Instruct models; also [8B bitsandbytes 4-bit](https://huggingface.co/unsloth/Apertus-8B-Instruct-2509-unsloth-bnb-4bit).
-- **Bartowski GGUF:** [8B](https://huggingface.co/bartowski/swiss-ai_Apertus-8B-Instruct-2509-GGUF) and [70B](https://huggingface.co/bartowski/swiss-ai_Apertus-70B-Instruct-2509-GGUF) — Alternative original-model quantizations.
-- **redponike GGUF:** [8B](https://huggingface.co/redponike/Apertus-8B-Instruct-2509-GGUF) and [70B](https://huggingface.co/redponike/Apertus-70B-Instruct-2509-GGUF) — Additional builds linked by the official Ollama guide.
+**Apertus 1.0 Instruct GGUF conversions:**
+
+| Maintainer | 8B | 70B | Notes |
+| ---------- | -- | --- | ----- |
+| Unsloth | [GGUF](https://huggingface.co/unsloth/Apertus-8B-Instruct-2509-GGUF) | [GGUF](https://huggingface.co/unsloth/Apertus-70B-Instruct-2509-GGUF) | Also offers [8B bitsandbytes 4-bit](https://huggingface.co/unsloth/Apertus-8B-Instruct-2509-unsloth-bnb-4bit). |
+| Bartowski | [GGUF](https://huggingface.co/bartowski/swiss-ai_Apertus-8B-Instruct-2509-GGUF) | [GGUF](https://huggingface.co/bartowski/swiss-ai_Apertus-70B-Instruct-2509-GGUF) | Alternative quantizations. |
+| redponike | [GGUF](https://huggingface.co/redponike/Apertus-8B-Instruct-2509-GGUF) | [GGUF](https://huggingface.co/redponike/Apertus-70B-Instruct-2509-GGUF) | Linked by the official Ollama guide. |
+
 - **Red Hat AI FP8:** [8B Instruct](https://huggingface.co/RedHatAI/Apertus-8B-Instruct-2509-FP8-dynamic) — Dynamic FP8 conversion for compatible GPU serving.
 - **OnPrem AI 1.5:** [8B FP8](https://huggingface.co/onprem-ai/Apertus-v1.5-8B-FP8), [70B FP8](https://huggingface.co/onprem-ai/Apertus-v1.5-70B-FP8), and [70B NVFP4](https://huggingface.co/onprem-ai/Apertus-v1.5-70B-NVFP4) — Quantized checkpoints with a [temporary vLLM build](https://github.com/onprem-ai/vllm-apertus-1p5).
 - **1.5 text-only GGUF:** [Andreas Martin Q8_0](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text-Q8_0-GGUF) and [Colby Q4_K_M](https://huggingface.co/Colby/apertus-v1.5-8b-text-Q4_K_M-GGUF) — 8B conversions that omit multimodal capabilities.
@@ -189,7 +195,7 @@ Supporting models: [pretraining toxicity classifier](https://huggingface.co/swis
 
 ## Hosted APIs and cloud deployment
 
-### Managed access
+### Providers and managed deployment
 
 Entries were found through the official [directory](https://apertus-ai.org/pages/get-started/), [September 2026 ecosystem review](https://apertus-ai.org/articles/2026-09-apertus-1-5-ga/), and providers' own catalogs. Check providers for available versions, modalities, context limits, and pricing.
 
@@ -200,8 +206,7 @@ Entries were found through the official [directory](https://apertus-ai.org/pages
 | PHOENIQS / KVANT                 | [Active models](https://documentation.kvant.cloud/maas/active-models/)                                                                                                                                                          | Enterprise model service.                        |
 | Safe Swiss Cloud                 | [Private AI](https://safeswisscloud.com/en/private-ai/)                                                                                                                                                                         | Managed private AI offering.                     |
 | stepping stone                   | [AI on demand](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative) · [deployment notes](https://wiki.stoney-cloud.com/wiki/AI_on_demand:_apertus-ai/Apertus-v1.5-8B) | Managed 8B service.                              |
-| Public AI                        | [Developer platform](https://platform.publicai.co/) · [API reference](https://platform.publicai.co/api)                                                                                                                         | Chat and API access.                             |
-| Hugging Face Inference Providers | [PublicAI integration](https://huggingface.co/docs/inference-providers/providers/publicai)                                                                                                                                      | Apertus through Hugging Face's inference router. |
+| Public AI                        | [Developer platform](https://platform.publicai.co/) · [API reference](https://platform.publicai.co/api) · [Hugging Face integration](https://huggingface.co/docs/inference-providers/providers/publicai)                                                                                                                         | Chat and API access.                             |
 | Featherless                      | [Apertus catalog](https://featherless.ai/models?families=apertus) · [deployment guide](https://apertus-ai.org/docs/deploy/featherless/)                                                                                         | Serverless inference.                            |
 | Regolo                           | [Model catalog](https://regolo.ai/models/)                                                                                                                                                                                      | Additional provider listing `apertus-70b`.       |
 | OnPrem AI                        | [Model catalog](https://www.onprem.ai/en/ai-llm-models/)                                                                                                                                                                        | Local enterprise deployment and support.         |
@@ -235,7 +240,6 @@ Entries were found through the official [directory](https://apertus-ai.org/pages
 - [Apertus AI workshop](https://github.com/blancsw/apertus-ai-workshop) — Infomaniak-backed RAG combining Apertus generation with separate embedding and reranking models.
 - [Emilie](https://github.com/veronica-builds/emilie) — Community legal-document assistant with Apertus support and MCP-based case-law lookup.
 - [CertusAI](https://github.com/saurluca/CertusAI) — Swiss AI Weeks legal-assistant project using Apertus.
-- [HEVS pretraining-data indexing](https://github.com/Reliable-Information-Lab-HEVS/apertus-pretraining-data-indexing) — Community detokenization, Elasticsearch indexing, and corpus inspection tools.
 
 ## Community and contributing
 
