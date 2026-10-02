@@ -240,7 +240,6 @@ Entries were found through the official [directory](https://apertus-ai.org/pages
 ## Community and contributing
 
 - **Discuss models:** official [8B](https://huggingface.co/swiss-ai/Apertus-v1.5-8B/discussions) and [70B](https://huggingface.co/swiss-ai/Apertus-v1.5-70B/discussions) Hugging Face discussions.
-- **Report generation problems:** [Apertus Generation Issues](https://github.com/swiss-ai/Apertus-Generation-Issues-Reports).
 - **Contact the team:** [official contact page](https://apertus-ai.org/contact/); submit projects for the showcase through these channels.
 - **Meet the community:** [Discord](https://discord.gg/t9TY8FsJd), linked by the official ecosystem post; [Swiss AI events](https://www.swiss-ai.org/events) and [Swiss AI Weeks](https://ai-weeks.ch/).
 - **Follow updates:** [Mastodon](https://fosstodon.org/@apertus), [LinkedIn](https://www.linkedin.com/company/apertus/), [X](https://x.com/apertusllm), and [Bluesky](https://bsky.app/profile/did:plc:ytwqtr3ykzq6nzr7kg2465ca).
