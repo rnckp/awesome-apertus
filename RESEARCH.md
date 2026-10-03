@@ -41,6 +41,12 @@ Review release pages and model cards first, then refresh providers, runtime supp
 
 ## Verification results
 
+### Targeted addition — October 3, 2026
+
+Added Simon Bächler's Apertus 1.5 70B MLX [6-bit](https://huggingface.co/sbaechler/Apertus-v1.5-70B-FP6-mlx) and [8-bit](https://huggingface.co/sbaechler/Apertus-v1.5-70B-FP8-mlx) conversions, suggested via LinkedIn, as one grouped community entry and linked their requirements from the MLX runtime row. Both authored cards describe multimodal input with text output, gated downloads, and testing on an Apple M5 Max with 128 GB unified memory. They prescribe mlx-vlm at commit `6c739c192407e48ff6520703663320c3c506f52c`, describe its Apertus 1.5 support as unmerged, and explicitly exclude released mlx-vlm and mlx-lm. The LinkedIn suggestion describes a patched oMLX setup; the current cards document mlx-vlm instead, so no oMLX compatibility claim was added. The `FP6`/`FP8` repository names refer here to authored 6-bit/8-bit affine quantizations, not floating-point weight formats.
+
+The repository's link checker checked the two new model URLs; both returned connection errors, making that HTTP run inconclusive. Both authored cards were accessible through web browsing and inspected there, including the requirements section. The resource counter reports 110 resource-bullet entries, an increase of one. Local document links, contents anchors, Markdown table structure, and `git diff --check` passed. No model weights were downloaded or inference tested; the overall research date remains September 26.
+
 ### Targeted additions — October 2, 2026
 
 Added three Andreas Martin resources suggested by the maintainer via LinkedIn: the [Hack Apertus SFT notebook](https://www.kaggle.com/code/andreasmartinch/sft-apertus-v1-5-8b-hack-apertus-template), [Apertus 1.5 8B text-only conversion](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text), and [experimental Apertus collection](https://huggingface.co/collections/andreasmartin/apertus). The authored Hugging Face model card confirms standard Transformers 4.56+ support and gated access; the collection lists educational adaptations, embedding conversions, and a biomedical fine-tune. The notebook's purpose and Kaggle/CSCS testing are based on the author's supplied description because its contents were unavailable through web browsing.
