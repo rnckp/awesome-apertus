@@ -24,6 +24,7 @@ A curated guide to [Apertus](https://www.apertus-ai.org/), the open multilingual
   <li><a href="#community-quantizations-and-derivatives">Community quantizations and derivatives</a></li>
   <li><a href="#hosted-apis-and-cloud-deployment">Hosted APIs and cloud deployment</a></li>
   <li><a href="#applications-and-integrations">Applications and integrations</a></li>
+  <li><a href="#hack-apertus-projects">Hack Apertus projects</a></li>
   <li><a href="#community-and-contributing">Community and contributing</a></li>
 </ul>
 
@@ -247,6 +248,48 @@ Entries were found through the official [directory](https://apertus-ai.org/pages
 - [Apertus AI workshop](https://github.com/blancsw/apertus-ai-workshop) — Infomaniak-backed RAG combining Apertus generation with separate embedding and reranking models.
 - [Emilie](https://github.com/veronica-builds/emilie) — Community legal-document assistant with Apertus support and MCP-based case-law lookup.
 - [CertusAI](https://github.com/saurluca/CertusAI) — Swiss AI Weeks legal-assistant project using Apertus.
+
+## Hack Apertus projects
+
+Selected community projects from [Hack Apertus](https://hackapertus.ch/), reviewed on **October 9, 2026** during the ongoing online hackathon. These are experimental prototypes and research tools, not official Apertus releases. Selection requires an explicit code licence, project-specific documentation, a concrete Apertus use, and substantive implementation. See the [review notes](RESEARCH.md#hack-apertus-review--october-9-2026) for decisions and limitations; software and reported results were not independently tested.
+
+### Red-teaming and evaluation
+
+- [Swiss Statute QA](https://github.com/bisale24-ops/swiss-statute-qa) — Multilingual Swiss federal-law evaluation dataset with cited statutory answers, historical statute versions and recorded Apertus 1.5 responses. Apache-2.0 code; dataset CDLA-Permissive-2.0.
+- [Apertus StressLab](https://github.com/Alextsvr/apertus-stresslab) — False-premise acceptance experiments on Apertus 1.5 with preregistered evaluation, raw responses and provenance checks; small synthetic studies with quantization caveats. Apache-2.0.
+- [AirPatch](https://github.com/AhaWissenschaft/airpatch) — Evaluates Apertus code proposals in offline containers against hidden programming tests, with recorded responses, replay tooling and negative results. Apache-2.0.
+- [Vipunen](https://github.com/apn201/Vipunen-2B) — Apertus-driven red-teaming pipeline exploring Finnish poetic framing, with neutral public seeds and an operator console; original attack payloads are withheld. Apache-2.0.
+- [K-Probe](https://github.com/iamhuman-cheolheelee/k-probe) — Korean factuality, cultural and safety probes with source-backed cases, regex scoring, recorded Apertus 1.0/1.5 responses and a results dashboard. MIT.
+- [Apertus Red-Team Harness](https://github.com/devilking7x/apertus-redteam) — Seeded multilingual, prompt-injection and tool-use probes with response logs and heuristic scoring for human review. Apache-2.0.
+
+### Document understanding and grounded answers
+
+- [Fedlex Answer](https://github.com/bisale24-ops/fedlex-answer) — Swiss federal-law Q&A using local statutory retrieval, Apertus 1.5 generation and deterministic quotation/number checks in German, French and Italian. Apache-2.0.
+- [Apertus Evidence Lab](https://github.com/hallzyx/apertus) — Multilingual voting-booklet claim classification with hybrid retrieval and a trained decision head over frozen Apertus 1.5; requires its specialized model backend. Apache-2.0.
+- [Schild](https://github.com/ShenJun93/hack-apertus-schild/tree/main/track_2b) — Swiss personal-data redaction gateway combining deterministic identifier rules with Apertus 1.5 entity detection and reversible placeholders. Apache-2.0.
+- [Apertus Court Decisions](https://github.com/beyondExp/apertus-court-decisions) — Frozen Apertus 1.5 8B reader with a published classification head for Swiss court rulings; default execution checks the head and replays saved predictions. Apache-2.0.
+- [Folio](https://github.com/ksmostofa/folio) — Source-document checklist workbench with Apertus extraction, exact quotation/page checks, preserved conditional wording and human review. Apache-2.0.
+- [SplitAlign](https://github.com/sharonbasovich/splitalign) — Token-level semantic-difference detection between English and German, French or Italian Swiss government documents using hosted Apertus. Apache-2.0.
+- [SpanDiff](https://github.com/moscraciunxxx/SpanDiff-HackApertus) — Cross-language semantic-drift scoring using Apertus 1.5 8B hidden states, with development predictions and layer ablations; generates no text. Apache-2.0.
+- [ClaimLens](https://github.com/Xa4-wi/HackApertus) — Checks claims against Swiss voting booklets with Apertus 1.5, returning source-relative labels, quotations and PDF pages in German, French and Italian. Apache-2.0.
+- [Apertus QA](https://github.com/ventolabs-hq/apertus-qa) — Spanish Q&A over local snapshots of Argentine official statistics; Apertus plans and phrases answers while code supplies the numeric values. Apache-2.0.
+- [Apertus Evidence Ledger](https://github.com/sgagestudio/apertus-evidence-ledger) — SQLite-based document retrieval with Apertus synthesis, exact-quote citation checks and a hash-based evidence ledger. Apache-2.0.
+- [Velum](https://github.com/calderbuild/velum) — Swiss court-decision anonymisation combining Apertus entity detection with court-specific rule packs, deterministic edits and a human review interface. Apache-2.0.
+- [Klartext](https://github.com/LeFlegm/Klartext/tree/main/track_2b) — Swiss official-letter triage with source-span checks, deadline extraction and an Apertus 8B-to-70B cascade; evaluated on synthetic letters. Apache-2.0.
+- [ClearDesk](https://github.com/m7mdd77/cleardesk-apertus) — Local Apertus 1.5 CLI selecting a verified verbatim passage from four synthetic IT procedures, with abstention for unsupported questions. Apache-2.0.
+
+### Applications, workflow controls and adaptation
+
+- [Alpenstroke](https://github.com/nikitojik/Alpenstroke) — Multilingual swimming-workout logging and planning with Apertus, deterministic training-load calculations and user-confirmed parsed workouts. Apache-2.0.
+- [Zusage](https://github.com/shi1720/zusage) — Apertus 1.5 8B interview coach for Swiss apprenticeships, with a web interface and documented offline-demo and real-inference modes. Apache-2.0.
+- [GemeindeSim](https://github.com/hatif03/gemeindesim) — Apertus 1.5 generative-agent town exploring responses to municipal policies and budgets; an exploratory simulation, not a validated policy forecast. Apache-2.0.
+- [Kampung Sambau — Of the Dark](https://github.com/ratafani/Scary-Gate-Keeper) — Browser night-watch mystery with Apertus 1.5 visitor dialogue in English and German; Docker launch and aggregate live-model evaluation remain unverified by the author. Apache-2.0.
+- [Sovereign Trade Copilot](https://github.com/quaner1234-cmd/sovereign-trade-copilot) — Garment-trade inquiry analysis and reply drafting with Apertus, per-fact source spans and human approval checks. Apache-2.0.
+- [Apertus Sovereign Operations Bridge](https://github.com/ambrosinistefan8-stack/apertus-sovereign-operations-bridge) — Apertus 1.5 structured-fact extraction with deterministic conflict checks and human gates for proposed actions. Apache-2.0 notice; full licence text is linked rather than bundled.
+- [Apertus Gate](https://github.com/ondmindmanagement-hub/apertus-gate) — Structured Apertus 1.5 risk review of proposed AI actions; produces allow, human-review or block decisions without executing actions. Apache-2.0.
+- [MergeProof](https://github.com/williamleewilliam1-star/mergeproof-hack-apertus/tree/main/track_2b/src/mergeproof) — Evidence-linked, multilingual contributor summaries from public GitHub pull requests, with Apertus synthesis and deterministic fallback. Apache-2.0.
+- [Referto Sovrano](https://github.com/nicholasbuenger/referto-sovrano) — Synthetic clinical-note structuring demo with a local Apertus client, de-identification, FHIR export and a hash-chain audit log; clinical validity and data-residency claims are unverified. MIT.
+- [LoRaclette](https://github.com/bdravec/loraclette) — Experimental bottleneck-adapter training and position sweeps for Apertus; tested only on a small random model, not real 8B weights or the 4-bit path. Apache-2.0.
 
 ## Community and contributing
 
